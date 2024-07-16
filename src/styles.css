@@ -1,0 +1,200 @@
+/* You can add global styles to this file, and also import other style files */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-decoration: none;
+  color: unset;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  overflow-x: hidden;
+  /* Para navegadores WebKit */
+  /* Para Firefox */
+}
+body::-webkit-scrollbar {
+  width: 8px;
+  height: 10px;
+}
+body::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+body::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, rgb(199, 108, 193), transparent);
+  border-radius: 10px;
+}
+body::-webkit-scrollbar-thumb:hover {
+  background: white;
+}
+body * {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(222, 222, 222, 0.3725490196) #ffffff;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@media (max-width: 768px) {
+  body {
+    width: 100%;
+  }
+  .wrap {
+    width: 94% !important;
+  }
+  .container#header {
+    display: none;
+  }
+}
+.container {
+  width: 101% !important;
+}
+
+.wrap {
+  width: 70%;
+  margin: auto;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+h3.title {
+  font-size: 2rem;
+  font-weight: 600;
+  width: -moz-fit-content;
+  width: fit-content;
+  background: linear-gradient(45deg, #f9deff, #b3d0ff);
+  padding: 1.5rem;
+  border-radius: 31px;
+  color: white;
+  border: 2px solid white;
+}
+
+body {
+  background: rgb(201, 228, 236);
+  background: linear-gradient(180deg, rgb(201, 228, 236) 0%, rgba(253, 2, 106, 0.7) 30%, rgb(197, 204, 234) 38%, rgb(201, 227, 235) 53%, rgb(198, 205, 233) 75%, rgb(201, 228, 236) 86%, rgb(198, 205, 233) 97%);
+}

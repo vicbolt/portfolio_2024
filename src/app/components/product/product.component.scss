@@ -1,0 +1,73 @@
+.container {
+  width: 70%;
+  height: 70vh;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+
+  & .leftside {
+    width: 50%;
+
+    & img{
+        width: 100%;
+    }
+  }
+
+  & .rightside {
+    width: 50%;
+    padding: 1rem;
+    background-color: white;
+
+    & .name {
+      font-weight: 600;
+      font-size: 1.3rem;
+    }
+
+    & .subname {
+      font-weight: 500;
+      font-size: 1.1rem;
+    }
+
+    & .ref {
+      font-weight: 400;
+      font-size: 0.9rem;
+    }
+
+    & .container-send {
+      display: flex;
+      align-items: center;
+      & .icon-camion {
+        width: auto;
+        height: 2rem;
+      }
+      & .available {
+        color: purple;
+      }
+    }
+
+    & .container-buttons{
+        display: flex;
+        justify-content: space-between;
+
+        & .amount{
+            width: 14%;
+            border: 1px solid purple;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        & .cta{
+            width: 70%;
+            border: 2px solid purple;
+            padding: 1rem;
+            border-radius: 16px;
+            text-align: center;
+            color: purple;
+
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+  }
+}

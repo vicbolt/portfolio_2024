@@ -1,0 +1,13 @@
+.container {
+  width: 100%;
+}
+.container .container-img {
+  width: 80%;
+  margin: auto;
+}
+.container .container-img h1, .container .container-img h2 {
+  opacity: 0;
+}
+.container .container-img img {
+  width: 100%;
+}

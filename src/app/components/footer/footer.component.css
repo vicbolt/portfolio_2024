@@ -1,0 +1,65 @@
+.container {
+  width: 100%;
+  border-top: 2px solid white;
+}
+.container .wrap .container-main {
+  display: flex;
+  justify-content: space-between;
+}
+.container .wrap .container-main .contact {
+  width: 60%;
+}
+.container .wrap .container-main .contact h5 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.container .wrap .container-main .contact p {
+  color: black;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+.container .wrap .container-main .rrss {
+  width: 40%;
+  display: flex;
+  justify-content: end;
+}
+.container .wrap .container-main .rrss a {
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  justify-content: end;
+}
+.container .wrap .container-main .rrss img {
+  width: 100px;
+  height: 100px;
+}
+.container .wrap .derechos {
+  width: 100%;
+}
+.container .wrap .derechos p {
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .container .wrap .container-main {
+    flex-direction: column;
+  }
+  .container .wrap .container-main .contact {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  .container .wrap .container-main .rrss {
+    width: 100%;
+    justify-content: start;
+    margin-bottom: 2rem;
+  }
+  .container .wrap .container-main .rrss a img {
+    width: 45px;
+    height: 45px;
+  }
+  .container .wrap .derechos p {
+    font-size: 0.8rem;
+  }
+}

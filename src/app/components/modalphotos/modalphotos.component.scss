@@ -1,0 +1,10 @@
+.container{
+    width: 70%;
+    display: none;
+
+    & .wrap{
+        & img{
+            width: 50%;
+        }
+    }
+}

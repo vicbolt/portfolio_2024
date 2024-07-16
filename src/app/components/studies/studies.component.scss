@@ -1,0 +1,185 @@
+.container {
+  width: 100%;
+  padding-bottom: 10rem;
+
+  & .wrap {
+    & .container-main {
+      position: relative;
+
+      & .content {
+        display: flex;
+        justify-content: space-between;
+        padding: 4rem;
+        box-sizing: border-box;
+
+        & .container-img {
+          position: relative;
+          width: 48%;
+
+          & img {
+            position: absolute;
+            z-index: 7;
+            top: -5rem;
+          }
+        }
+
+        & .contain {
+          width: 48%;
+
+          & .text {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+
+            & p {
+              font-weight: 600;
+              font-size: 1.2rem;
+              margin-bottom: 0.5rem;
+            }
+
+            & span {
+              font-size: 1rem;
+              margin-bottom: 1.3rem;
+            }
+          }
+        }
+      }
+
+      & .box {
+        width: 108%;
+        height: 100%;
+        background: linear-gradient(
+          75deg,
+          transparent,
+          rgba(253, 248, 255, 0.1882352941)
+        );
+        border-radius: 30px;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        z-index: 5;
+        box-shadow: 7px 11px 12px rgba(0, 0, 0, 0.0784313725);
+
+        &.moving-div{
+          transition: transform 0.2s ease;
+
+        }
+      }
+
+      & .box1 {
+        width: 108%;
+        height: 100%;
+        background: linear-gradient(
+          75deg,
+          transparent,
+          rgba(253, 248, 255, 0.1882352941)
+        );
+        border-radius: 30px;
+        position: absolute;
+        top: 0%;
+        left: 4%;
+        z-index: 5;
+        box-shadow: 7px 11px 12px rgba(0, 0, 0, 0.0784313725);
+        transition: transform 0.5s ease;
+      }
+
+      & .box2 {
+        width: 115%;
+        height: 100%;
+        background: linear-gradient(75deg, transparent, #fdf8ff30);
+        border-radius: 30px;
+        position: absolute;
+        left: 1%;
+        top: 0;
+        z-index: 4;
+        box-shadow: 7px 11px 12px #00000014;
+        transition: transform 0.8s ease;
+      }
+
+      & .box3 {
+        width: 122%;
+        height: 100%;
+        background: linear-gradient(75deg, transparent, #fdf8ff30);
+        border-radius: 30px;
+        position: absolute;
+        left: 0%;
+        top: 0%;
+        z-index: 3;
+        box-shadow: 7px 11px 12px #00000014;
+        background-image: url("../../../assets/public/images/backgrounds/gorros3.png");
+        opacity: .7;
+        transition: transform 1s ease;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-bottom: 5rem;
+    & .wrap {
+      & .container-main {
+
+        & .content{
+        flex-direction: column;
+        padding: 6rem 2rem 0 2rem;
+        box-sizing: border-box;
+
+          & .container-img {
+            width: 100%;
+            & img {
+              transform: translateX(-11%) translateY(-89%) scale(1);
+            }
+          }
+  
+          & .contain {
+            padding: .5rem;
+            box-sizing: border-box;
+            width: 100%;
+  
+            & .empty {
+              display: none;
+            }
+  
+            & .text {
+              width: 100%;
+
+              & p{
+                font-size: 1rem;
+                line-height: 1.3rem;
+              }
+
+              & span{
+                font-size: .8rem;
+              }
+            }
+          }
+        }
+
+        & .box {
+          width: 100%;
+          transform: translateX(0%) translateY(1%);
+          height: 103%;
+        }
+
+        & .box1 {
+          width: 100%;
+          transform: translateX(0%) translateY(2%);
+          height: 105%;
+        }
+
+        & .box2 {
+          width: 100%;
+          transform: translateX(0%) translateY(3%);
+          height: 107%;
+        }
+        & .box3 {
+          width: 100%;
+          transform: translateX(0%) translateY(3%);
+          height: 107%;
+        }
+      }
+    }
+  }
+}

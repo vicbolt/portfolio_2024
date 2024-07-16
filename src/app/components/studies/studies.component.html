@@ -1,0 +1,45 @@
+<div class="container" id="studies">
+  <div class="wrap">
+    <div class="container-main">
+      <div class="content" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">
+        <div class="container-img" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">
+          <img
+            src="../../../assets/public/images/backgrounds/mockup-laptop2.png"
+            alt=""
+          />
+        </div>
+        <div class="contain" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">
+          <div class="text">
+            <p>Master en diseño y programación web</p>
+            <span>CICE (2021-2022)</span>
+
+            <p>Curso de Scrum Master</p>
+            <span>CICE (2021)</span>
+
+            <p>Curso frameworks (React, Vue, Angular)</p>
+            <span>Udemy (En Curso)</span>
+
+            <p>Curso de Iniciación a Wordpress</p>
+            <span>CICE (2020)</span>
+
+            <p>Curso de Branding y comunicación personal</p>
+            <span>CICE (2020)</span>
+
+            <p>
+              Grado superior en "Realización de proyectos audiovisuales y
+              escénicos"
+            </p>
+            <span>La Arboleda (2016)</span>
+
+            <p>Curso sobre "El cubismo en la cultura moderna"</p>
+            <span>Telefónica y Museo Reina Sofia (2019)</span>
+          </div>
+        </div>
+      </div>
+      <div class="box moving-div" [style.transform]="transform"></div>
+      <div class="box1 moving-div" [style.transform]="transform1"></div>
+      <div class="box2 moving-div" [style.transform]="transform2"></div>
+      <div class="box3 moving-div" [style.transform]="transform3"></div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,39 @@
+.container .wrap .container-main {
+  display: flex;
+  justify-content: space-between;
+}
+.container .wrap .container-main .leftside {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+.container .wrap .container-main .leftside a {
+  width: 80%;
+  padding: 2rem;
+  border: 1px solid white;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: rgba(255, 255, 255, 0.49);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.container .wrap .container-main .leftside a:hover {
+  transform: scale(0.99);
+  cursor: pointer;
+}
+.container .wrap .container-main .rightside {
+  width: 58%;
+}
+
+@media (max-width: 768px) {
+  .container .wrap .container-main {
+    flex-direction: column;
+  }
+  .container .wrap .container-main .leftside, .container .wrap .container-main .rightside {
+    width: 100%;
+  }
+  .container .wrap .container-main .leftside a, .container .wrap .container-main .rightside a {
+    font-size: 0.8rem;
+  }
+}

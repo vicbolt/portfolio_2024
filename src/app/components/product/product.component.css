@@ -1,0 +1,62 @@
+.container {
+  width: 70%;
+  height: 70vh;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.container .leftside {
+  width: 50%;
+}
+.container .leftside img {
+  width: 100%;
+}
+.container .rightside {
+  width: 50%;
+  padding: 1rem;
+  background-color: white;
+}
+.container .rightside .name {
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+.container .rightside .subname {
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+.container .rightside .ref {
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+.container .rightside .container-send {
+  display: flex;
+  align-items: center;
+}
+.container .rightside .container-send .icon-camion {
+  width: auto;
+  height: 2rem;
+}
+.container .rightside .container-send .available {
+  color: purple;
+}
+.container .rightside .container-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+.container .rightside .container-buttons .amount {
+  width: 14%;
+  border: 1px solid purple;
+  padding: 1rem;
+  text-align: center;
+}
+.container .rightside .container-buttons .cta {
+  width: 70%;
+  border: 2px solid purple;
+  padding: 1rem;
+  border-radius: 16px;
+  text-align: center;
+  color: purple;
+}
+.container .rightside .container-buttons .cta:hover {
+  cursor: pointer;
+}

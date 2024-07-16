@@ -1,0 +1,29 @@
+<div class="container" id="contact">
+    <div class="wrap">
+        <div class="title">
+            <h3>Let's talk!</h3>
+        </div>
+
+        <div class="container-form">
+            <div class="overlay-form">
+                <form (ngSubmit)="enviar(Mensaje)" #Mensaje="ngForm">
+                    <input name="name" #name="ngModel" [(ngModel)]="mensaje.name" type="text" placeholder="Nombre o Empresa" required>
+                    <input name="email" #email="ngModel" [(ngModel)]="mensaje.email" type="email" placeholder="E-mail" required>
+                    <input name="phone" #phone="ngModel" [(ngModel)]="mensaje.phone" type="text" placeholder="Teléfono (Opcional)">
+                    <select name="reason" #reason="ngModel" [(ngModel)]="mensaje.reason" required>
+                        <option value="informacion">Información</option>
+                        <option value="presupuesto">Presupuesto</option>
+                        <option value="contratacion-empresa">Contratación para empresas</option>
+                        <option value="contratacion-particular">Contratación para particulares</option>
+                    </select>
+                    <textarea name="msg" #msg="ngModel" [(ngModel)]="mensaje.msg" rows="10" placeholder="Escribe aquí tu mensaje..." required></textarea>
+                    <button type="submit">Enviar</button>
+                </form>
+
+                <div class="thanks-modal">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

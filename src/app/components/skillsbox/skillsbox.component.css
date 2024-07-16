@@ -1,0 +1,68 @@
+@charset "UTF-8";
+.container {
+  width: 100%;
+  height: 60rem;
+  position: relative;
+  background-image: url("../../../assets/public/images/backgrounds/crystal-shape.png");
+}
+.container .wrap .container-main {
+  display: flex;
+  justify-content: space-between;
+}
+.container .wrap .container-main .box {
+  width: 24%;
+  padding: 3rem;
+  border: 1px solid white;
+  border-radius: 16px;
+  background: rgba(0, 0, 0, 0.02);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+.container .wrap .container-main .box img {
+  width: 60%;
+}
+.container .wrap .container-main .box h4 {
+  font-weight: 600;
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 2rem;
+}
+.container .wrap .container-main .box p {
+  color: white;
+  line-height: 1.8rem;
+  font-size: 1rem;
+  text-align: justify;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    height: auto; /* Ajustamos la altura automática para adaptarse al contenido */
+    padding: 2rem 0; /* Añadimos espacio en la parte superior e inferior */
+    background-size: 227%;
+  }
+  .container .wrap .container-main {
+    flex-direction: column; /* Cambiamos a disposición en columna para dispositivos móviles */
+    align-items: center; /* Centramos los elementos */
+  }
+  .container .wrap .container-main .box {
+    width: 80%; /* Ancho completo en dispositivos móviles */
+    margin-bottom: 2rem; /* Espaciado inferior entre las cajas */
+    padding: 2rem;
+  }
+  .container .wrap .container-main .box img {
+    width: 80%; /* Reducimos el tamaño de la imagen */
+    margin-bottom: 1rem;
+  }
+  .container .wrap .container-main .box h4 {
+    font-size: 1.5rem; /* Reducimos el tamaño del título */
+    margin-bottom: 1.5rem;
+  }
+  .container .wrap .container-main .box p {
+    font-size: 0.9rem; /* Reducimos el tamaño del texto */
+    line-height: 1.5rem;
+  }
+}

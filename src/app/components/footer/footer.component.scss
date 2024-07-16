@@ -1,0 +1,85 @@
+.container {
+  width: 100%;
+  border-top: 2px solid white;
+
+  & .wrap {
+    & .container-main {
+      display: flex;
+      justify-content: space-between;
+
+      & .contact {
+        width: 60%;
+        & h5 {
+          font-size: 1.1rem;
+          font-weight: 600;
+          margin-bottom: 0.5rem;
+        }
+
+        & p {
+          color: black;
+          font-size: 1rem;
+          margin-bottom: 0.5rem;
+        }
+      }
+
+      & .rrss {
+        width: 40%;
+        display: flex;
+        justify-content: end;
+
+        
+        & a{
+            width: fit-content;
+            display: flex;
+            justify-content: end;
+        }
+
+        & img {
+          width: 100px;
+          height: 100px;
+        }
+      }
+    }
+
+    & .derechos {
+      width: 100%;
+      & p {
+        font-size: 0.9rem;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px){
+  .container{
+    .wrap{
+      .container-main{
+        flex-direction: column;
+
+        & .contact{
+          width: 100%;
+          margin-bottom: 2rem;
+        }
+
+        & .rrss{
+          width: 100%;
+          justify-content: start;
+          margin-bottom: 2rem;
+
+          & a{
+            & img{
+              width: 45px;
+              height: 45px;
+            }
+          }
+        }
+      }
+      & .derechos{
+        & p{
+          font-size: .8rem;
+        }
+      }
+    }
+  }
+}

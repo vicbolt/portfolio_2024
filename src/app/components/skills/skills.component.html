@@ -1,0 +1,98 @@
+<div class="container" id="skillspc">
+  <div class="wrap">
+    <div class="ring-container">
+      <div>
+        <div class="card card-1">
+          <img
+            class="element"
+            src="../../../assets/public/images/icons/programs_white/html.png"
+            alt="Icono HTML"
+          />
+          <p class="title">HTML</p>
+        </div>
+        <div class="card card-2">
+          <img
+            class="element"
+            src="../../../assets/public/images/icons/programs_white/css.png"
+            alt="Icono CSS"
+          />
+          <p class="title">CSS</p>
+        </div>
+        <div class="card card-3">
+          <img
+            class="element"
+            src="../../../assets/public/images/icons/programs_white/js.png"
+            alt="Icono JavaScript"
+          />
+          <p class="title">JavaScript</p>
+        </div>
+        <div class="card card-4">
+          <img
+            class="element"
+            src="../../../assets/public/images/icons/programs_white/angular.png"
+            alt="Icono Angular"
+          />
+          <p class="title">Angular</p>
+        </div>
+
+        <div class="card card-5">
+          <img
+            class="element"
+            src="../../../assets/public/images/icons/programs_white/vue.png"
+            alt="Icono VUE"
+          />
+          <p class="title">Vue</p>
+        </div>
+
+        <div class="card card-6">
+          <img
+            class="element"
+            src="../../../assets/public/images/icons/programs_white/react.png"
+            alt="Icono React"
+          />
+          <p class="title">React</p>
+        </div>
+
+        <div class="card card-7">
+          <img
+            class="element"
+            src="../../../assets/public/images/icons/programs_white/php.png"
+            alt="Icono PHP"
+          />
+          <p class="title">PHP</p>
+        </div>
+
+        <div class="card card-8">
+          <img
+            class="element"
+            src="../../../assets/public/images/icons/programs_white/vscode.png"
+            alt="Icono Visual Studio Code"
+          />
+          <p class="title">VS Code</p>
+        </div>
+
+        <div class="card card-9">
+          <img
+            class="element"
+            src="../../../assets/public/images/icons/programs_white/phpdb.png"
+            alt="Icono PHP My Admin"
+          />
+          <p class="title">PHP MyAdmin</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="carousel">
+  <div class="wrapper" [style.transform]="'translateX(' + transformValue + 'px)'" #carouselWrapper>
+      <div class="cards" *ngFor="let card of cards; let i = index" [class.active]="i === currentIndex">
+          <div class="card card-{{ i + 1 }}">
+            <div class="img-container">
+              <img class="element" src={{card.imageSrc}} alt="Icono HTML" />
+            </div>
+              <p class="title">{{card.title}}</p>
+          </div>
+      </div>
+  </div>
+</div>
