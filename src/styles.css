@@ -160,7 +160,7 @@ table {
   border-spacing: 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   body {
     width: 100%;
   }

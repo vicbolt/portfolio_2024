@@ -109,7 +109,8 @@
 }
 
 
-@media (max-width: 1024px) {
+
+@media (max-width: 780px) {
   .container {
     padding: 2rem 0;
     box-sizing: content-box;
@@ -170,3 +171,4 @@
     transform: translateX(-50%) translateY(200%) rotateY(30deg) rotateX(30deg) scale(0.6);
   }
 }
+

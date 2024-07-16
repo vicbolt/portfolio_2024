@@ -3,14 +3,31 @@
 
 
   & .container-img {
+    width: 80%;
+    margin: auto;
     & h1, h2{
       opacity: 0;
     }
-    width: 80%;
-    margin: auto;
     & img {
       width: 100%;
     }
 
+  }
+}
+
+@media (max-width: 1024px){
+  .container {
+    width: 100%;
+
+    & .container-img {
+      padding-top: 4rem;
+      width: 100%;
+      margin: auto;
+
+      & img {
+        width: 100%;
+      }
+  
+    }
   }
 }

@@ -131,17 +131,17 @@
   }
   .container .wrap .container-main .box1 {
     width: 100%;
-    transform: translateX(0%) translateY(2%);
+    transform: translateX(-4%) translateY(0%) !important;
     height: 105%;
   }
   .container .wrap .container-main .box2 {
     width: 100%;
-    transform: translateX(0%) translateY(3%);
+    transform: translateX(-1%) translateY(0%) !important;
     height: 107%;
   }
   .container .wrap .container-main .box3 {
     width: 100%;
-    transform: translateX(0%) translateY(3%);
+    transform: translateX(0%) translateY(2%) !important;
     height: 107%;
   }
 }

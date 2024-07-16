@@ -20,7 +20,7 @@
   cursor: pointer;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .container {
     width: 100%;
     position: fixed;

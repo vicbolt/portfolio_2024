@@ -173,12 +173,13 @@
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .container#skillspc {
     display: none;
   }
 
   .carousel{
     display: block;
+    max-width: unset;
   }
 }
