@@ -30,7 +30,11 @@ export class SkillsComponent implements OnInit, AfterViewInit {
   moveX: number = 0;
   @ViewChild('carouselWrapper', { static: true }) carouselWrapper: ElementRef | undefined;
 
-  constructor(private renderer: Renderer2) {}
+  public chevron: HTMLElement | null = null;
+
+  constructor(private renderer: Renderer2) {
+
+  }
 
   ngOnInit(): void {
     this.updateTransformValue();
@@ -40,6 +44,11 @@ export class SkillsComponent implements OnInit, AfterViewInit {
   moveNext() {
     this.currentIndex = (this.currentIndex + 1) % this.cards.length;
     this.updateTransformValue();
+    this.chevron = document.getElementById('chevron');
+    if(this.chevron){
+      this.chevron.style.display = 'none';
+    }
+
   }
 
   movePrev() {

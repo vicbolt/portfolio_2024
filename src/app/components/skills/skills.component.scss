@@ -130,6 +130,33 @@
     transition: transform 0.3s ease-in-out;
   }
 
+  & .container-chevron {
+    position: absolute;
+    width: fit-content;
+    top: 22%;
+    left: 244px;
+    z-index: 1;
+    cursor: pointer;
+    animation: pulse 1.8s infinite;
+
+    @keyframes pulse {
+      0% {
+          transform: scale(1);
+      }
+      50% {
+          transform: scale(1.02);
+      }
+      100% {
+          transform: scale(1);
+      }
+  }
+
+    & .chevron {
+      font-size: 10rem; /* Ajusta el tamaño de la flecha */
+      color: white;
+    }
+  }
+
   .cards {
     flex: 0 0 auto;
     width: 250px; // Ajustado para mostrar parte de la siguiente tarjeta
@@ -168,13 +195,12 @@
   }
 }
 
-
 @media (max-width: 1200px) {
   .container#skillspc {
     display: none;
   }
 
-  .carousel{
+  .carousel {
     display: block;
     max-width: unset;
   }
