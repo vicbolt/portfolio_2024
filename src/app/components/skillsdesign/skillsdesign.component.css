@@ -98,7 +98,7 @@
   .container {
     padding: 2rem 0;
     box-sizing: content-box;
-    height: 34rem;
+    height: 40rem;
   }
   .container .ring-container {
     padding: 0;
@@ -126,21 +126,39 @@
     text-align: start;
   }
   .container .ring-container .card-1 {
-    transform: translateX(-77%) translateY(140%) rotateY(30deg) rotateX(30deg) scale(1);
+    transform: translateX(17%) translateY(140%) rotateY(30deg) rotateX(30deg) scale(1);
+  }
+  .container .ring-container .card-1:hover {
+    transform: translateX(17%) translateY(140%) rotateY(30deg) rotateX(30deg) scale(1);
   }
   .container .ring-container .card-2 {
-    transform: translateX(-40%) translateY(150%) rotateY(30deg) rotateX(30deg) scale(1);
+    transform: translateX(90%) translateY(150%) rotateY(30deg) rotateX(30deg) scale(1);
+  }
+  .container .ring-container .card-2:hover {
+    transform: translateX(90%) translateY(150%) rotateY(30deg) rotateX(30deg) scale(1);
   }
   .container .ring-container .card-3 {
-    transform: translateX(12%) translateY(162%) rotateY(30deg) rotateX(30deg) scale(1);
+    transform: translateX(163%) translateY(162%) rotateY(30deg) rotateX(30deg) scale(1);
+  }
+  .container .ring-container .card-3:hover {
+    transform: translateX(163%) translateY(162%) rotateY(30deg) rotateX(30deg) scale(1);
   }
   .container .ring-container .card-4 {
-    transform: translateX(-120%) translateY(282%) rotateY(30deg) rotateX(30deg) scale(1);
+    transform: translateX(122%) translateY(282%) rotateY(30deg) rotateX(30deg) scale(1);
+  }
+  .container .ring-container .card-4:hover {
+    transform: translateX(122%) translateY(282%) rotateY(30deg) rotateX(30deg) scale(1);
   }
   .container .ring-container .card-5 {
-    transform: translateX(-161%) translateY(270%) rotateY(30deg) rotateX(30deg) scale(1);
+    transform: translateX(49%) translateY(270%) rotateY(30deg) rotateX(30deg) scale(1);
+  }
+  .container .ring-container .card-5:hover {
+    transform: translateX(49%) translateY(270%) rotateY(30deg) rotateX(30deg) scale(1);
   }
   .container .ring-container .card-6 {
-    transform: translateX(-80%) translateY(290%) rotateY(30deg) rotateX(30deg) scale(1);
+    transform: translateX(195%) translateY(290%) rotateY(30deg) rotateX(30deg) scale(1);
+  }
+  .container .ring-container .card-6:hover {
+    transform: translateX(195%) translateY(290%) rotateY(30deg) rotateX(30deg) scale(1);
   }
 }

@@ -114,7 +114,7 @@
   .container {
     padding: 2rem 0;
     box-sizing: content-box;
-    height: 34rem;
+    height: 40rem;
 
     .ring-container {
       padding: 0;
@@ -148,33 +148,57 @@
       }
 
       .card-1 {
-        transform: translateX(-77%) translateY(140%) rotateY(30deg)
+        transform: translateX(17%) translateY(140%) rotateY(30deg)
           rotateX(30deg) scale(1);
+          &:hover{
+            transform: translateX(17%) translateY(140%) rotateY(30deg)
+            rotateX(30deg) scale(1);
+          }
       }
 
       .card-2 {
-        transform: translateX(-40%) translateY(150%) rotateY(30deg)
+        transform: translateX(90%) translateY(150%) rotateY(30deg)
           rotateX(30deg) scale(1);
+          &:hover{
+            transform: translateX(90%) translateY(150%) rotateY(30deg)
+          rotateX(30deg) scale(1);
+          }
       }
 
       .card-3 {
-        transform: translateX(12%) translateY(162%) rotateY(30deg)
+        transform: translateX(163%) translateY(162%) rotateY(30deg)
           rotateX(30deg) scale(1);
+          &:hover{
+            transform: translateX(163%) translateY(162%) rotateY(30deg)
+          rotateX(30deg) scale(1);
+          }
       }
 
       .card-4 {
-        transform: translateX(-120%) translateY(282%) rotateY(30deg)
+        transform: translateX(122%) translateY(282%) rotateY(30deg)
           rotateX(30deg) scale(1);
+          &:hover{
+            transform: translateX(122%) translateY(282%) rotateY(30deg)
+          rotateX(30deg) scale(1);
+          }
       }
 
       .card-5 {
-        transform: translateX(-161%) translateY(270%) rotateY(30deg)
+        transform: translateX(49%) translateY(270%) rotateY(30deg)
           rotateX(30deg) scale(1);
+          &:hover{
+            transform: translateX(49%) translateY(270%) rotateY(30deg)
+          rotateX(30deg) scale(1);
+          }
       }
 
       .card-6 {
-        transform: translateX(-80%) translateY(290%) rotateY(30deg)
+        transform: translateX(195%) translateY(290%) rotateY(30deg)
           rotateX(30deg) scale(1);
+          &:hover{
+            transform: translateX(195%) translateY(290%) rotateY(30deg)
+          rotateX(30deg) scale(1);
+          }
       }
     }
   }
