@@ -30,14 +30,14 @@
             type="text"
             placeholder="Teléfono (Opcional)"
           />
-          <div class="custom-select">
             <select
               name="reason"
               #reason="ngModel"
               [(ngModel)]="mensaje.reason"
               required
             >
-              <option value="informacion" selected>Información</option>
+            <option value="elige" hidden>Elige una opción     &#9207;</option>
+              <option value="informacion">Información</option>
               <option value="presupuesto">Presupuesto</option>
               <option value="contratacion-empresa">
                 Contratación para empresas
@@ -46,7 +46,6 @@
                 Contratación para particulares
               </option>
             </select>
-          </div>
 
           <textarea
             name="msg"

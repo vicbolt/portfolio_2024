@@ -200,12 +200,17 @@
 
         & .close-button {
           position: fixed;
-          top: 20px;
-          right: 20px;
+          width: 100%;
+          right: 4%;
           font-size: 24px;
           cursor: pointer;
           z-index: 1001;
-          color: white;
+          color: #fff;
+
+          & p{
+            width: 100%;
+            text-align: end;
+          }
         }
 
         & .gallery {
@@ -226,29 +231,29 @@
 }
 
 @media (max-width: 768px) {
-  .container{
-    & .wrap{
-      & .center{
+  .container {
+    & .wrap {
+      & .center {
         display: none;
 
-        & line{
+        & line {
           display: none;
         }
       }
 
-      & .container-webdesign{
+      & .container-webdesign {
         display: flex;
         flex-direction: column;
 
-        & .leftside{
+        & .leftside {
           width: 100%;
 
-          & .web-design{
+          & .web-design {
             padding: 2rem;
             margin-bottom: 2rem;
             box-sizing: border-box;
 
-            & h3{
+            & h3 {
               text-align: start;
               font-size: 2rem;
               line-height: 2.7rem;
@@ -256,13 +261,13 @@
           }
         }
 
-        & .rightside{
+        & .rightside {
           width: 100%;
 
-          & .websites{
+          & .websites {
             margin-bottom: 2rem;
 
-            & a{
+            & a {
               padding: 2rem;
               box-sizing: border-box;
             }
@@ -270,19 +275,19 @@
         }
       }
 
-      & .container-photography{
+      & .container-photography {
         display: flex;
         flex-direction: column;
 
-        & .leftside{
+        & .leftside {
           width: 100%;
 
-          & .photography{
+          & .photography {
             padding: 2rem;
             box-sizing: border-box;
             margin-bottom: 2rem;
 
-            & h3{
+            & h3 {
               text-align: start;
               font-size: 2rem;
               line-height: 2.7rem;
@@ -290,15 +295,15 @@
           }
         }
 
-        & .rightside{
+        & .rightside {
           width: 100%;
 
-          & .tattoo{
+          & .tattoo {
             padding: 2rem;
             box-sizing: border-box;
             margin-bottom: 2rem;
 
-            & h3{
+            & h3 {
               text-align: start;
               font-size: 2rem;
               line-height: 2.7rem;
@@ -306,7 +311,6 @@
           }
         }
       }
-
     }
   }
 }

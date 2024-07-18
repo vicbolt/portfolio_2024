@@ -246,12 +246,16 @@
 }
 .container .modal-overlay .wrap .modal-content .close-button {
   position: fixed;
-  top: 20px;
-  right: 20px;
+  width: 100%;
+  right: 4%;
   font-size: 24px;
   cursor: pointer;
   z-index: 1001;
-  color: white;
+  color: #fff;
+}
+.container .modal-overlay .wrap .modal-content .close-button p {
+  width: 100%;
+  text-align: end;
 }
 .container .modal-overlay .wrap .modal-content .gallery {
   display: flex;

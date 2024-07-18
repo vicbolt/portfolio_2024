@@ -14,7 +14,7 @@ export class ContactComponent {
     name: '',
     email: '',
     phone: '',
-    reason: '',
+    reason: 'elige',
     msg: ''
   };
 
@@ -30,6 +30,7 @@ export class ContactComponent {
         console.log('Correo enviado', response);
         form.resetForm()
 
+        this.thanksmodal = document.getElementById('thanksModal');
         if(this.thanksmodal){
           this.thanksmodal.style.display = 'flex';
         }

@@ -32,9 +32,7 @@ export class SkillsComponent implements OnInit, AfterViewInit {
 
   public chevron: HTMLElement | null = null;
 
-  constructor(private renderer: Renderer2) {
-
-  }
+  constructor(private renderer: Renderer2) {}
 
   ngOnInit(): void {
     this.updateTransformValue();
@@ -45,10 +43,9 @@ export class SkillsComponent implements OnInit, AfterViewInit {
     this.currentIndex = (this.currentIndex + 1) % this.cards.length;
     this.updateTransformValue();
     this.chevron = document.getElementById('chevron');
-    if(this.chevron){
+    if (this.chevron) {
       this.chevron.style.display = 'none';
     }
-
   }
 
   movePrev() {
@@ -68,9 +65,9 @@ export class SkillsComponent implements OnInit, AfterViewInit {
   addSwipeListeners() {
     if (this.carouselWrapper) {
       const element = this.carouselWrapper.nativeElement;
-      this.renderer.listen(element, 'touchstart', (event: TouchEvent) => this.onTouchStart(event));
-      this.renderer.listen(element, 'touchmove', (event: TouchEvent) => this.onTouchMove(event));
-      this.renderer.listen(element, 'touchend', () => this.onTouchEnd());
+      element.addEventListener('touchstart', (event: TouchEvent) => this.onTouchStart(event), { passive: true });
+      element.addEventListener('touchmove', (event: TouchEvent) => this.onTouchMove(event), { passive: true });
+      element.addEventListener('touchend', () => this.onTouchEnd());
     }
   }
 
@@ -121,7 +118,7 @@ export class SkillsComponent implements OnInit, AfterViewInit {
       });
     
       rotatingElement.addEventListener('animationend', () => {
-        rotatingElement.classList.remove('animate');
+        rotatingElement.classList.remove('element-animate');
       });
     });
   }

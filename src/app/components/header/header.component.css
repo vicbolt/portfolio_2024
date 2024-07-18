@@ -20,6 +20,10 @@
   cursor: pointer;
 }
 
+.hamburger-menu {
+  display: none;
+}
+
 @media (max-width: 1200px) {
   .container {
     width: 100%;
@@ -33,6 +37,7 @@
     display: none;
   }
   .hamburger-menu {
+    display: flex;
     position: relative;
   }
   .hamburger {
