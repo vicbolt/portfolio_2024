@@ -58,9 +58,26 @@
           ></textarea>
           <button type="submit">Enviar</button>
         </form>
-
-        <div class="thanks-modal"></div>
       </div>
+    </div>
+  </div>
+  <div class="thanks-modal-overlay" id="thanksModal">
+    <div class="wrap">
+      <div class="modal-content">
+        <div class="close-button" (click)="closeThanksModal()" >
+          <span>X</span>
+        </div>
+        <h4>¡Tu mensaje ha sido enviado con éxito!</h4>
+        <h3>Gracias por rellenar el formulario</h3>
+        <p> He recibido tu solicitud y me pondré en contacto contigo lo antes
+          posible. </p>
+        
+        <p>Se ha enviado una confirmación a tu dirección de correo
+          electrónico. Si no ves el correo en tu bandeja de entrada, por favor
+          revisa tu carpeta de spam o correo no deseado.</p>
+        
+        <p>Gracias por tu interés y confianza</p>
+
     </div>
   </div>
 </div>

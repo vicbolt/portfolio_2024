@@ -18,7 +18,10 @@ export class ContactComponent {
     msg: ''
   };
 
-  constructor(private http: HttpClient) {}
+  public thanksmodal: HTMLElement | null = null;
+
+  constructor(private http: HttpClient) {
+  }
 
   enviar(form: NgForm) {
 
@@ -26,11 +29,22 @@ export class ContactComponent {
       (response) => {
         console.log('Correo enviado', response);
         form.resetForm()
+
+        if(this.thanksmodal){
+          this.thanksmodal.style.display = 'flex';
+        }
         
       },
       (error) => {
         console.error('Error al enviar correo', error);
       }
     );
+  }
+
+  closeThanksModal(){
+    this.thanksmodal = document.getElementById('thanksModal');
+    if(this.thanksmodal){
+      this.thanksmodal.style.display= 'none';
+    }
   }
 }
