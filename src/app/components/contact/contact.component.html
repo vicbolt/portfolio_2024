@@ -15,10 +15,6 @@
             placeholder="Nombre o Empresa"
             required
           />
-          <div *ngIf="name.invalid && name.touched">
-            <small class="error">Nombre es requerido.</small>
-          </div>
-        
           <input
             name="email"
             #email="ngModel"
@@ -27,38 +23,30 @@
             placeholder="E-mail"
             required
           />
-          <div *ngIf="email.invalid && email.touched">
-            <small class="error">Correo electrónico es requerido y debe ser válido.</small>
-          </div>
-        
           <input
             name="phone"
             #phone="ngModel"
             [(ngModel)]="mensaje.phone"
             type="tel"
             placeholder="Teléfono (Opcional)"
-            pattern="[0-9]*"
           />
-          <div *ngIf="phone.invalid && phone.touched">
-            <small class="error">Teléfono debe contener solo números.</small>
-          </div>
-        
-          <select
-            name="reason"
-            #reason="ngModel"
-            [(ngModel)]="mensaje.reason"
-            required
-          >
-            <option value="" hidden>Elige una opción &#9207;</option>
-            <option value="informacion">Información</option>
-            <option value="presupuesto">Presupuesto</option>
-            <option value="contratacion-empresa">Contratación para empresas</option>
-            <option value="contratacion-particular">Contratación para particulares</option>
-          </select>
-          <div *ngIf="reason.invalid && reason.touched">
-            <small class="error">Razón es requerida.</small>
-          </div>
-        
+            <select
+              name="reason"
+              #reason="ngModel"
+              [(ngModel)]="mensaje.reason"
+              required
+            >
+            <option value="elige" hidden>Elige una opción     &#9207;</option>
+              <option value="informacion">Información</option>
+              <option value="presupuesto">Presupuesto</option>
+              <option value="contratacion-empresa">
+                Contratación para empresas
+              </option>
+              <option value="contratacion-particular">
+                Contratación para particulares
+              </option>
+            </select>
+
           <textarea
             name="msg"
             #msg="ngModel"
@@ -67,13 +55,14 @@
             placeholder="Escribe aquí tu mensaje..."
             required
           ></textarea>
-          <div *ngIf="msg.invalid && msg.touched">
-            <small class="error">Mensaje es requerido.</small>
+          <button type="submit">Enviar</button>
+          <div id="errorModal" class="modal" [class.show]="showErrorModal">
+            <div class="modal-content">
+              <span class="close" (click)="closeErrorModal()">&times;</span>
+              <p>{{ errorMessage }}</p>
+            </div>
           </div>
-        
-          <button type="submit" [disabled]="Mensaje.invalid">Enviar</button>
         </form>
-        
       </div>
     </div>
   </div>
