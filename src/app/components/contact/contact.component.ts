@@ -27,7 +27,7 @@ export class ContactComponent {
 
   enviar(form: NgForm) {
 
-    this.http.post<any>(`${this.apiURL}/data`, this.mensaje).subscribe(
+    this.http.post<any>(`${this.apiURL}/send-email`, this.mensaje).subscribe(
       (response) => {
         console.log('Correo enviado', response);
         form.resetForm()
