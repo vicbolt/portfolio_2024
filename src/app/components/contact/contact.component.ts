@@ -10,6 +10,8 @@ import { NgForm } from '@angular/forms';
 })
 export class ContactComponent {
 
+  apiURL = 'https://portfolioback2024-e023105753cd.herokuapp.com';
+
   mensaje = {
     name: '',
     email: '',
@@ -25,7 +27,7 @@ export class ContactComponent {
 
   enviar(form: NgForm) {
 
-    this.http.post<any>('http://localhost:3000/send-email', this.mensaje).subscribe(
+    this.http.post<any>(`${this.apiURL}/data`, this.mensaje).subscribe(
       (response) => {
         console.log('Correo enviado', response);
         form.resetForm()
