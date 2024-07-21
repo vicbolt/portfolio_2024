@@ -20,20 +20,38 @@ export class ContactComponent {
     msg: ''
   };
 
-  showErrorModal = false;
-  errorMessage = '';
+  errors: string[] = [];
+  showErrorModal: boolean = false;
 
   public thanksmodal: HTMLElement | null = null;
 
   constructor(private http: HttpClient) {
   }
 
+  // ENVIAMOS EL CORREO
   enviar(form: NgForm) {
 
-    if (form.invalid) { // Si algun dato es invalido
-      this.checkForm(form);
-    } else { //envio el formulario
+    // SI HAY ERRORES ->
+    this.errors = []; // Reset errors
 
+    if (!this.mensaje.name) {
+      this.errors.push('El nombre es obligatorio.');
+    }
+    if (!this.mensaje.email) {
+      this.errors.push('El correo electrónico es obligatorio.');
+    } else if (!this.validateEmail(this.mensaje.email)) {
+      this.errors.push('El correo electrónico no es válido.');
+    }
+    if (!this.mensaje.reason) {
+      this.errors.push('Debe seleccionar una razón.');
+    }
+    if (!this.mensaje.msg) {
+      this.errors.push('El mensaje es obligatorio.');
+    }
+    if (this.errors.length > 0) {
+      this.showErrorModal = true;
+    } else {
+       //SI NO HAY ERRORES ->
       this.http.post<any>(`${this.apiURL}/send-email`, this.mensaje).subscribe(
         (response) => {
           console.log('Correo enviado', response);
@@ -52,33 +70,10 @@ export class ContactComponent {
     }
   }
 
-  checkForm(form: NgForm) {
-    if (form.invalid) {
-      this.errorMessage = this.generateErrorMessage(form);
-      this.showErrorModal = true;
-    }
+  validateEmail(email: string): boolean {
+    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@(([^<>()\[\]\\.,;:\s@"]+\.)+[^<>()\[\]\\.,;:\s@"]{2,})$/i;
+    return re.test(email);
   }
-
-  generateErrorMessage(form: NgForm): string {
-    let message = '';
-    if (form.controls['name'].invalid && form.controls['name'].touched) {
-      message += 'Nombre es requerido.\n';
-    }
-    if (form.controls['email'].invalid && form.controls['email'].touched) {
-      message += 'Correo electrónico es requerido y debe ser válido.\n';
-    }
-    if (form.controls['reason'].invalid && form.controls['reason'].touched) {
-      message += 'Razón es requerida.\n';
-    }
-    if (form.controls['msg'].invalid && form.controls['msg'].touched) {
-      message += 'Mensaje es requerido.\n';
-    }
-    if (form.controls['phone'].invalid && form.controls['phone'].touched) {
-      message += 'Teléfono debe contener solo números.\n';
-    }
-    return message;
-  }
-
   closeErrorModal() {
     this.showErrorModal = false;
   }

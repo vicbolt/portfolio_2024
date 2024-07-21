@@ -56,16 +56,25 @@
             required
           ></textarea>
           <button type="submit">Enviar</button>
-          <div id="errorModal" class="modal" [class.show]="showErrorModal">
-            <div class="modal-content">
-              <span class="close" (click)="closeErrorModal()">&times;</span>
-              <p>{{ errorMessage }}</p>
-            </div>
-          </div>
         </form>
       </div>
     </div>
   </div>
+
+  <!-- MODAL ERRORES EN FORMULARIO -->
+  <div class="error-modal-overlay" [ngClass]="{'show': showErrorModal}">
+    <div class="modal-content">
+      <span class="close" (click)="closeErrorModal()">&times;</span>
+      <div *ngIf="errors.length">
+        <h2>Errores:</h2>
+        <ul>
+          <li *ngFor="let error of errors">{{error}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL GRACIAS -->
   <div class="thanks-modal-overlay" id="thanksModal">
     <div class="wrap">
       <div class="modal-content">
