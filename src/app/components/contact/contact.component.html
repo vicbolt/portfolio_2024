@@ -29,6 +29,7 @@
             [(ngModel)]="mensaje.phone"
             type="tel"
             placeholder="Teléfono (Opcional)"
+            pattern="[0-9]*"
           />
             <select
               name="reason"
@@ -57,19 +58,6 @@
           ></textarea>
           <button type="submit">Enviar</button>
         </form>
-      </div>
-    </div>
-  </div>
-
-  <!-- MODAL ERRORES EN FORMULARIO -->
-  <div class="error-modal-overlay" [ngClass]="{'show': showErrorModal}">
-    <div class="modal-content">
-      <span class="close" (click)="closeErrorModal()">&times;</span>
-      <div *ngIf="errors.length">
-        <h2>Errores:</h2>
-        <ul>
-          <li *ngFor="let error of errors">{{error}}</li>
-        </ul>
       </div>
     </div>
   </div>
