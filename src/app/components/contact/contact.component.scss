@@ -5,6 +5,7 @@
   & .wrap {
     & .title {
       width: 100%;
+
       & h3 {
         font-weight: 600;
         font-size: 10rem;
@@ -34,7 +35,7 @@
 
           & input,
           select {
-            width: 49%;
+            width: 100%;
             padding: 2rem;
             border-radius: 30px;
             border: none;
@@ -71,15 +72,100 @@
               cursor: pointer;
             }
           }
+
+          & p {
+            color: red;
+            margin: 1rem 0;
+            font-size: 1.2rem;
+            text-align: center;
+          }
         }
       }
     }
   }
 
+  .input-container {
+    position: relative;
+    margin-bottom: 1em;
+    display: flex;
+    width: 49%;
+    
+    &.msg{
+      width: 100%;
+    }
 
-  
+    .input-error {
+      border: 1px solid #dc3545; // Borde rojo para el campo con error
+    }
+
+    .error-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #dc3545; // Color rojo para el mensaje de error
+      pointer-events: none; // Permite que el texto no interfiera con la interacción del usuario
+      background-color: rgb(255, 255, 255); // Fondo blanco semi-translúcido
+      text-align: center;
+      z-index: 1;
+
+      width: 100%;
+      padding: 2rem;
+      border-radius: 30px;
+      margin-bottom: 2rem;
+      font-size: 1.2rem;
+      box-sizing: border-box;
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+    }
+
+    input[type="text"].input-error,
+    input[type="email"].input-error,
+    input[type="tel"].input-error,
+    select.input-error,
+    textarea.input-error {
+      padding: 10px; // Asegura que el padding no se sobrescriba
+      box-sizing: border-box;
+    }
+  }
+
+  // Estilos responsivos
+  @media (max-width: 768px) {
+    .input-container {
+      margin-bottom: 0.5em;
+
+      .error-overlay {
+        font-size: 0.75em; // Ajusta el tamaño de fuente para dispositivos más pequeños
+      }
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select,
+    textarea {
+      width: 100%; // Asegura que los inputs ocupen el ancho completo en dispositivos pequeños
+    }
+  }
+
+  @media (max-width: 480px) {
+    .input-container {
+      .error-overlay {
+        font-size: 0.65em; // Ajusta aún más el tamaño de fuente para dispositivos muy pequeños
+      }
+    }
+  }
+
+
+
+
   & .thanks-modal-overlay {
-      display: none;
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -92,14 +178,14 @@
     backdrop-filter: blur(50px);
 
     .modal-content {
-        border-radius: 30px;
-        padding: 2rem;
-        width: 100%;
-        height: fit-content;
-        background: white;
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: column;
+      border-radius: 30px;
+      padding: 2rem;
+      width: 100%;
+      height: fit-content;
+      background: white;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
 
       & .close-button {
         top: 20px;
@@ -111,7 +197,7 @@
         text-align: end;
       }
 
-      & h4{
+      & h4 {
         text-align: center;
         background: linear-gradient(144.3deg, #c6ebce, transparent);
         padding: 1rem;
@@ -124,14 +210,14 @@
 
       }
 
-      & h3{
+      & h3 {
         text-align: center;
         font-size: 2rem;
         font-weight: 600;
         margin-bottom: 2rem;
       }
 
-      & p{
+      & p {
         width: 50%;
         line-height: 1.5rem;
         margin: auto;
@@ -139,7 +225,7 @@
         text-align: center;
       }
 
-      & span{
+      & span {
         font-weight: 600;
         color: #7e7e7e;
         font-size: 2rem;
@@ -151,6 +237,7 @@
 @media (max-width: 768px) {
   .container {
     height: 73rem;
+
     & .wrap {
       & .container-form {
         & .overlay-form {

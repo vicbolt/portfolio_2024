@@ -20,6 +20,9 @@ export class ContactComponent {
     msg: ''
   };
 
+  error = '';
+
+
   public thanksmodal: HTMLElement | null = null;
 
   constructor(private http: HttpClient) {
@@ -28,7 +31,12 @@ export class ContactComponent {
   // ENVIAMOS EL CORREO
   enviar(form: NgForm) {
 
+    this.error = '';
+
     // SI HAY ERRORES ->
+    if(this.mensaje.name.length < 1 || this.mensaje.email.length < 1 || this.mensaje.reason.length < 1 || this.mensaje.msg.length < 1 ){
+      this.error = 'Rellena los campos vacíos antes de enviar el formulario';
+    }
 
     //SI NO HAY ERRORES ->
     this.http.post<any>(`${this.apiURL}/send-email`, this.mensaje).subscribe(
@@ -47,6 +55,7 @@ export class ContactComponent {
       }
     );
   }
+
 
   closeThanksModal() {
     this.thanksmodal = document.getElementById('thanksModal');

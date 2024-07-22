@@ -6,58 +6,70 @@
 
     <div class="container-form">
       <div class="overlay-form">
-        <form (ngSubmit)="enviar(Mensaje)" #Mensaje="ngForm">
-          <input
-            name="name"
-            #name="ngModel"
-            [(ngModel)]="mensaje.name"
-            type="text"
-            placeholder="Nombre o Empresa"
-            required
-          />
-          <input
-            name="email"
-            #email="ngModel"
-            [(ngModel)]="mensaje.email"
-            type="email"
-            placeholder="E-mail"
-            required
-          />
-          <input
-            name="phone"
-            #phone="ngModel"
-            [(ngModel)]="mensaje.phone"
-            type="tel"
-            placeholder="Teléfono (Opcional)"
-            pattern="[0-9]*"
-          />
+        <form (ngSubmit)="enviar(Mensaje)" #Mensaje="ngForm" novalidate>
+          <div class="input-container">
+            <input
+              name="name"
+              #name="ngModel"
+              [(ngModel)]="mensaje.name"
+              type="text"
+              placeholder="Nombre o Empresa"
+              required
+            />
+          </div>
+        
+          <div class="input-container">
+            <input
+              name="email"
+              #email="ngModel"
+              [(ngModel)]="mensaje.email"
+              type="email"
+              placeholder="E-mail"
+              required
+            />
+          </div>
+        
+          <div class="input-container">
+            <input
+              name="phone"
+              #phone="ngModel"
+              [(ngModel)]="mensaje.phone"
+              type="tel"
+              placeholder="Teléfono (Opcional)"
+              pattern="[0-9]*"
+            />
+          </div>
+        
+          <div class="input-container">
             <select
               name="reason"
               #reason="ngModel"
               [(ngModel)]="mensaje.reason"
               required
             >
-            <option value="elige" hidden>Elige una opción     &#9207;</option>
+              <option value="elige" hidden>Elige una opción &#9207;</option>
               <option value="informacion">Información</option>
               <option value="presupuesto">Presupuesto</option>
-              <option value="contratacion-empresa">
-                Contratación para empresas
-              </option>
-              <option value="contratacion-particular">
-                Contratación para particulares
-              </option>
+              <option value="contratacion-empresa">Contratación para empresas</option>
+              <option value="contratacion-particular">Contratación para particulares</option>
             </select>
-
-          <textarea
-            name="msg"
-            #msg="ngModel"
-            [(ngModel)]="mensaje.msg"
-            rows="10"
-            placeholder="Escribe aquí tu mensaje..."
-            required
-          ></textarea>
+          </div>
+        
+          <div class="input-container msg">
+            <textarea
+              name="msg"
+              #msg="ngModel"
+              [(ngModel)]="mensaje.msg"
+              rows="10"
+              placeholder="Escribe aquí tu mensaje..."
+              required
+            ></textarea>
+          </div>
+        
           <button type="submit">Enviar</button>
+          <p class="error">{{error}}</p>
         </form>
+        
       </div>
     </div>
   </div>
